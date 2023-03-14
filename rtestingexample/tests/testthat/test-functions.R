@@ -5,24 +5,24 @@ test_that(desc = "Add", code = {
   c <- add(2,3);   # Runs the function
 
   # Test that the result is the correct value
-  expect_that( object = c, condition = equals(5) );
+  expect_equal(c,5);
 
   # Test that the result is numeric
-  expect_that( object = is.numeric(c), condition = equals(TRUE) );
+  expect_true(is.numeric(c));
 })
 
 
 #test_that(desc = "Fahrenheit to Celsius", code = {
 #  
 #  temp_C <- convert_fahrenheit_to_celsius(50);   
-#  expect_that( object = temp_C, condition = equals(10) );  
-#  expect_that( object = is.numeric(temp_C), condition = equals(TRUE) );
+#  expect_equal(temp_C,10);  
+#  expect_true(is.numeric(temp_C));
 #})
 
 
 #test_that(desc = "Subtract", code = { 
 #  c <- subtract(3,2); 
-#  expect_that( object = c, condition = equals(1) );
-#  expect_that( object = is.numeric(c), condition = equals(TRUE) );
+#  expect_equal(c,1);
+#  expect_true(is.numeric(c));
 #})
 
