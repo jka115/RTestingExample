@@ -34,8 +34,8 @@ jobs:
         with:
         extra-packages: any::rcmdcheck
         needs: check
-     - uses: r-lib/actions/check-r-package@v2
-       with:
-         args: 'c("--no-manual")'
-         error-on: '"error"'
-         check-dir: '"rtestingexample"'
+      - uses: r-lib/actions/check-r-package@v2
+        with:
+          args: 'c("--no-manual")'
+          error-on: '"error"'
+          check-dir: '"rtestingexample"'
