@@ -35,12 +35,13 @@ jobs:
             coverage
             check
           working-directory: 'rtestingexample'
+      - uses: r-lib/actions/setup-renv@v2
       - name: Test coverage
         run: |
           covr::codecov(
             quiet = FALSE,
             clean = FALSE,
-            path = "rtestingexample"
+            path = "rtestingexample",
             install_path = file.path(Sys.getenv("RUNNER_TEMP"), "package")
           )
         shell: Rscript {0}
