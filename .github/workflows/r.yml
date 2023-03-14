@@ -39,4 +39,4 @@ jobs:
         with:
           args: 'c("--no-manual")'
           error-on: '"error"'
-          check-dir: '"rtestingexample"'
+          working-directory: 'rtestingexample'
